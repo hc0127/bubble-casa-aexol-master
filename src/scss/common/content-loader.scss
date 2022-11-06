@@ -1,0 +1,12 @@
+.content-loader {
+	padding: $article-list-pdt $article-list-pdr $article-list-pdb $article-list-pdl;
+	height: 100vh;
+	@include flex(flex-start, flex-start);
+	flex-direction: column;
+
+	&__article-list {
+		svg {
+			margin-bottom: 40px;
+		}
+	}
+}

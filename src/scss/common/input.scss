@@ -1,0 +1,86 @@
+$border-radius: 4px;
+
+.input {
+  &__wrapper {
+    position: relative;
+    @include flex(center, flex-start);
+    width: 100%;
+    height: 45px;
+    border: 1px $black solid;
+    border-radius: $border-radius;
+    background-color: white;
+    padding-left: 18px;
+
+    @media(max-width: 960px) {
+      height: 30px;
+    }
+
+    &:focus-within {
+      border-color: $focus;
+    }
+  }
+
+  input {
+    border-radius: $border-radius;
+  }
+
+  &__label {
+    position: absolute;
+    background: $white;
+    top: -4px;
+    left: 14px;
+    padding: 0 7px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &__field {
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 12px;
+  }
+
+  &__icon {
+    svg {
+      padding-right: 14px;
+    }
+  }
+
+  &__error-icon {
+    padding: 0 18px;
+  }
+
+  &__error-wrapper {
+    height: 13px;
+    margin-top: 3.5px;
+    font-size: 10px;
+    line-height: 13px;
+    color: $error-red;
+    font-weight: $font-medium;
+  }
+
+  .secondary {
+    height: 6.2vh;
+    border: none;
+    border-radius: unset;
+    padding-left: 1.66vh;
+  }
+
+  &.error {
+    .input__wrapper {
+      border-color: $error-red;
+    }
+  }
+
+  .close-icon {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+}
+
+.input::placeholder {
+  color: $black;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: Montserrat;
+}

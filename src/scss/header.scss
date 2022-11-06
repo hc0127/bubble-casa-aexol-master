@@ -1,0 +1,415 @@
+.header {
+  width: 100%;
+  height: 64px;
+  background-color: $white;
+  padding: 0 25px;
+  @include flex(center, space-between);
+  box-shadow: 36px 0 0 rgb(0 0 0 / 7%);
+  position: fixed;
+  z-index: 11;
+  top: 0;
+
+  @media(max-width: 470px) {
+    padding: 0 5px;
+  }
+
+  &__link {
+    font-family: $futura;
+    cursor: pointer;
+    font-size: 20px;
+    @include flex(flex-start, center);
+    flex-direction: column;
+    transition: .5s;
+    position: absolute;
+    top: 60px;
+    left: 23px;
+
+    @media(max-width: 960px) {
+      left: 0;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 5px;
+    }
+
+    .header-button {
+      background: #FFFFFF;
+      border: 1px solid #DBDDDD;
+      border-radius: 4px;
+      width: 165px;
+      height: 36px;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #71777B;
+      border-radius: 8px;
+
+      @media(max-width: 960px) {
+        width: 99px;
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+
+    &--counter-button {
+      display: flex;
+
+      @media(max-width: 960px) {
+        display: block;
+      }
+    }
+
+    .articles-button,
+    .nodes-button {
+      border: none;
+      border-radius: 52px;
+
+      @media(min-width: 960px) {
+        width: 137px;
+      }
+    }
+
+    .app-button {
+      font-size: 16px;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    .counter {
+      color: #940E49;
+      margin-right: 5px;
+
+      @media(max-width: 960px) {
+        margin-right: 0;
+      }
+    }
+
+    @media(max-width: 960px) {
+      .earn-button {
+        display: none
+      }
+
+      .nodes-button {
+        display: none;
+      }
+    }
+
+    @media(min-width: 960px) {
+      .app-button {
+        display: none
+      }
+    }
+  }
+
+  &__left {
+    @include flex;
+    gap: 10px;
+
+    .logo {
+      @include flex(flex-start, start);
+      flex-direction: column;
+      gap: 15px;
+      cursor: pointer;
+
+      .fade-enter-active,
+      .fade-leave-active {
+        transition: opacity 0.3s ease;
+      }
+
+      .fade-enter-from,
+      .fade-leave-to {
+        opacity: 0;
+      }
+
+      &>img {
+        height: 32px;
+
+        @media(max-width: 960px) {
+          height: 25px;
+        }
+
+      }
+    }
+
+    .logo-description {
+      color: grey;
+      font-family: $futura;
+      font-size: 18px;
+      font-weight: bold;
+
+      @media(max-width: 960px) {
+        display: none;
+      }
+    }
+
+    .author {
+      font-size: 18px;
+      font-weight: $font-medium;
+      @include flex;
+      gap: 20px;
+
+      &__thumbnail {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      &__name {
+        margin-top: 10px;
+      }
+
+      &__follow {
+        width: 140px;
+        height: 35px;
+        font-size: 16px;
+        font-weight: $font-medium;
+        padding: unset;
+        border: 1.5px solid $black;
+      }
+    }
+
+    .breadcrumbs {
+      flex-grow: 1;
+      font-weight: $font-semi-bold;
+      font-size: 18px;
+      color: $grey;
+      cursor: pointer;
+      margin-top: 15px;
+
+      @media(max-width: 960px) {
+        display: none
+      }
+
+      &__last {
+        color: $berry  !important;
+      }
+
+      .bold {
+        color: $black;
+      }
+    }
+  }
+
+  &__right {
+    @include flex;
+    gap: 30px;
+
+    @media (max-width: 470px) {
+      gap: 5px;
+    }
+
+    .article-search {
+      @include flex();
+      gap: 15px;
+
+      .input__wrapper {
+        height: 35px;
+        padding-left: 12px;
+        background-color: transparent;
+        width: 230px;
+
+        @media(max-width: 960px) {
+          margin-left: 5px;
+          width: 150px;
+        }
+
+        @media(max-width: 470px) {
+          margin-left: 5px;
+          width: 120px;
+        }
+
+        @media(max-width: 400px) {
+          margin-left: 5px;
+          width: 80px;
+        }
+
+        .input__icon {
+          margin-top: 2px;
+          @include flex();
+
+          svg {
+            height: 20px;
+            width: auto;
+          }
+        }
+
+        input {
+          background-color: transparent;
+        }
+      }
+
+      .check-box {
+        @media(max-width: 970px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .check-box__input {
+        min-width: 17px;
+        height: 17px;
+        width: 17px;
+      }
+    }
+
+    .user {
+      cursor: pointer;
+      @include flex;
+
+      // @media(max-width: 960px) {
+      //   width: 40px;
+      // }
+
+      .button {
+        width: 120px;
+        height: 35px;
+        font-size: 18px;
+        font-weight: $font-medium;
+
+        @media(max-width: 960px) {
+          width: 70px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .advanced-filters {
+    position: absolute;
+    top: 65px;
+    width: 310px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    @media(max-width: 960px) {
+      width: 100%;
+      right: 0;
+      // height: 350px;
+    }
+
+    .close {
+      // display: none;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+      font-size: 18px;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+    .filters-visible {
+      .arrow {
+        transition: transform .5s;
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        bottom: 15px;
+      }
+    }
+  }
+
+  .articleMode {
+    cursor: pointer;
+    transition: all .2s;
+
+    @media(max-width: 960px) {
+      display: none;
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+
+  .filters-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    .filter-elem {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .active {
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+.install-popup {
+  .img {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .or {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .desc {
+    margin: 5px 0;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+.transparent-header {
+  background-color: transparent;
+}
+
+
+// mobile footer
+@media (max-width: 960px) {
+  #homeBtn {
+    display: none;
+  }
+
+  #infoBtn {
+    display: none;
+  }
+
+  d #sendBtn {
+    display: none;
+  }
+
+  #mailBtn {
+    display: none;
+  }
+
+  #tbBtn {
+    display: none;
+  }
+
+  #backBtn {
+    display: none;
+  }
+
+  #addBtn,
+  #cloudBtn,
+  #sendBtn,
+  #languageBtn {
+    padding: 0;
+  }
+}

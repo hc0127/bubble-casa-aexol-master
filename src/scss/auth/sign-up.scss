@@ -1,0 +1,31 @@
+.sign-up-user-popup {
+  .popup--inner {
+    width: 455px;
+    @media(max-width: 460px) {
+      width: 90%;
+    }
+  }
+}
+
+.sign-up-user {
+
+  &--title {
+    margin-bottom: 33px;
+  }
+
+  &__google {
+    margin-bottom: 18px;
+  }
+
+  .input {
+    margin-bottom: 10px;
+  }
+
+  &__accept span {
+    color: $red-button;
+  }
+
+  &__create_button {
+    margin-top: 18px;
+  }
+}

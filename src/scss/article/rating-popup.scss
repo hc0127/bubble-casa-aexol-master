@@ -1,0 +1,29 @@
+.rating-popup {
+  .popup--inner {
+    width: 455px;
+  }
+
+  &__button-wrapper {
+    @include flex();
+    @include flex-direction(column);
+    gap: 14px;
+
+    .button__active {
+      color: $primary-button;
+      background-color: $tooltip-background;
+      font-weight: bold;
+    }
+  }
+
+  &__info{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+
+    &.invisible{
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.check-box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:focus-visible {
+    border-color: $focus;
+  }
+
+  &__input {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #940E49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: .3s;
+
+    @media(max-width: 970px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__input-check {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 2px;
+    transition: .4s;
+    transform: scale(0) rotate(-90deg);
+  }
+
+  &.active {
+    .check-box__input-check {
+      transform: scale(1) rotate(0deg);
+    }
+
+    .check-box__input {
+      background-color: #940E49;
+    }
+  }
+
+  &__slot {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+
+    @media(max-width: 970px) {
+      padding: 0 5px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .check-box__input {
+      border-color: $disabled;
+    }
+
+    .check-box__slot {
+      color: $disabled;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.button {
+  font-family: Montserrat;
+  height: 45px;
+  line-height: 59px;
+  padding: 0 15px;
+  width: 100%;
+  font-size: 19px;
+  border-radius: 4px;
+  transition: .4s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media(max-width: 970px) {
+    // padding: 0;
+  }
+
+  .desc {
+    font-size: 12px;
+    color: #71777B;
+  }
+
+  &:hover,
+  &__active {
+    filter: brightness(.9);
+  }
+
+  &__flat {
+    border-radius: 0;
+  }
+
+  &__secondary {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 38px;
+    border-bottom: 3px solid $black;
+  }
+
+  &__yellow {
+    background-color: $primary-button;
+    color: $black;
+  }
+
+  &__red {
+    background-color: $red-button;
+    color: $white;
+  }
+
+  &__blue {
+    background-color: $blue-button;
+    color: $white;
+  }
+
+  &__white {
+    background: $white;
+    color: $black;
+  }
+
+  &__transparent {
+    background: transparent;
+    color: black;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      filter: none;
+      cursor: not-allowed;
+    }
+  }
+
+  // svg {
+  // height: 26px;
+  // }
+}
+
+//style for footer icon
+
+.disabled-gray {
+  fill: $grey;
+}
+
+.disabled-opacity {
+  opacity: 1;
+
+  path {
+    fill: #71777B;
+  }
+
+  rect {
+    stroke: #71777B;
+    opacity: .3;
+  }
+}

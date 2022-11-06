@@ -1,0 +1,44 @@
+.article-lang {
+  @include flex(center, center);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 200;
+  width: 80px;
+  height: 24px;
+  position: relative;
+  color: #71777B;
+
+  @media(max-width: 970px) {
+    font-size: 20px;
+  }
+
+  &__list {
+    position: absolute;
+    background-color: $tooltip-background;
+    bottom: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px;
+    color: white;
+    border-radius: 6px;
+  }
+
+  &__list-element {
+    font-size: 17px;
+    font-weight: $font-medium;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #FFFFFF33;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: left;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: #515867;
+    }
+  }
+}

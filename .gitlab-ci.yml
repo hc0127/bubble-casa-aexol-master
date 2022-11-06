@@ -1,0 +1,45 @@
+image: node:14
+
+stages:
+  - prepare
+  - build
+  - deploy
+
+cache: &global_cache
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    # - .next/cache/
+  policy: pull-push
+
+deps:
+  stage: prepare
+  script:
+    - npm i
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+  cache:
+    <<: *global_cache
+    policy: pull
+
+.deploy: &deploy_global
+  stage: deploy
+  cache:
+    <<: *global_cache
+    policy: pull
+  needs:
+    - job: build
+      artifacts: true
+  script:
+    - npx surge --project ./dist --domain bubble-casa.surge.sh
+deploy.production:
+  <<: *deploy_global
+  only:
+    - master
+  environment: production

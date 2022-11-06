@@ -1,0 +1,14 @@
+.manage-relations{
+  .popup--inner{
+    width: 550px;
+  }
+  &__title{
+    margin-bottom: 50px;
+  }
+  .desc{
+    input{
+      height: 120px;
+      margin-bottom: 40px;
+    }
+  }
+}

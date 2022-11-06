@@ -1,0 +1,21 @@
+.multiselect {
+
+  height: 61px;
+  border: 1px #000 solid;
+  border-radius: 4px;
+  background-color: white;
+
+  &.is-active {
+    box-shadow: none;
+  }
+}
+
+.multiselect-option.is-selected, .multiselect-option.is-pointed {
+  background-color: $primary-button;
+  color: black;
+
+  &.is-pointed {
+    background-color: darken($primary-button, 5%);
+    color: black;
+  }
+}

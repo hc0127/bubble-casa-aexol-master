@@ -1,0 +1,89 @@
+.sign-up-author {
+  .popup--inner {
+    width: 933px;
+    height: auto;
+    @include flex();
+    padding: 0;
+    @media(max-width: 960px) {
+      flex-direction: column;
+      transform: scale(.65);
+    }
+  }
+
+  .check-box__input {
+    margin: 0;
+  }
+
+  &__column {
+    width: 50%;
+    display: flex;
+    @include flex(normal, flex-start);
+    @include flex-direction(column);
+    padding: 35px;
+    @media(max-width: 960px) {
+      width: 100%;
+      padding-top: 5px;
+    }
+
+    &--left {
+      gap: 24px;
+    }
+
+    &--right {
+      gap: 12px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 50%;
+      top: 48px;
+      width: 1px;
+      height: calc(100% - 48px - 70px);
+      background: $grey;
+      @media(max-width: 960px) {
+        display: none;
+        // transform: rotate(0.25turn);
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: $font-semi-bold;
+    padding: 0 10px;
+    @media(max-width: 960px) {
+      font-size: 10px;
+    }
+
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__radio-group {
+    @include flex(flex-start, flex-start);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    gap: 30px;
+
+    @media(max-width: 960px) {
+      justify-content: center;
+    }
+
+    .check-box__input, .check-box__input-check {
+      border-radius: 50%;
+    }
+
+  }
+
+  &__radio-button:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .sign-up-user__create_button {
+    margin: 0;
+  }
+}

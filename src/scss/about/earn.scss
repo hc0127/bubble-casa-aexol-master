@@ -1,0 +1,36 @@
+.earn-popup,
+.hiw-popup {
+    .popup--inner {
+        background-color: #f8f9fb;
+    }
+
+    .content {
+        padding: 20px;
+        font-weight: bold;
+        max-width: 500px;
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        .single {
+            margin-bottom: 5px;
+        }
+
+        .text {
+            line-height: 25px;
+        }
+
+
+        .img {
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            margin-top: 40px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

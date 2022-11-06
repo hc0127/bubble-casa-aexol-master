@@ -1,0 +1,22 @@
+.title-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 26px 0;
+
+  &__bar {
+    width: 100%;
+    height: 1px;
+    background-color: #C6C6C6;
+  }
+
+  &__title {
+    padding: 0 14px;
+    width: fit-content;
+    min-width: fit-content;
+    font-size: 11px;
+    color: #C6C6C6;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+}

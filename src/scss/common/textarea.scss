@@ -1,0 +1,60 @@
+.textarea {
+  &__wrapper {
+    position: relative;
+    @include flex(flex-start, center);
+  }
+
+  &--field {
+    font-family: Montserrat;
+  }
+
+  .textarea--label {
+    position: absolute;
+    background: $white;
+    top: -4px;
+    left: 14px;
+    padding: 0 7px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+
+  .textarea--field {
+    width: 100%;
+    height: 70px;
+    border: 1.2px $black solid;
+    border-radius: 4px;
+    padding: 20px 0 0 18px;
+    resize: none;
+    font-size: 12px;
+  }
+
+  &__error-wrapper {
+    height: 13px;
+    margin-top: 3.5px;
+    font-size: 10px;
+    line-height: 13px;
+    color: $error-red;
+    font-weight: $font-medium;
+  }
+  textarea:focus-visible {
+    border-color: $focus;
+  }
+}
+
+.textarea::placeholder {
+  color: $black;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: Montserrat;
+}
+
+.textarea {
+  &.error {
+    .input--field {
+      border-color: $error-red;
+    }
+  }
+}
+
+

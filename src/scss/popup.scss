@@ -1,0 +1,24 @@
+.popup-title{
+  font-family: $futura;
+  font-size: 30px;
+  font-weight: $font-medium;
+  line-height: 51px;
+  text-align: center;
+  margin-bottom: 10px;
+  @media(max-width: 960px) {
+    font-size: 25px;
+  }
+}
+.popup-subtitle{
+  font-size: 16px;
+  color: #8b8b8b ;
+  text-align: center;
+  margin-bottom: 20px;
+  @media(max-width: 960px) {
+    font-size: 12px;
+  }
+}
+
+.popup-text {
+  padding: 30px 0;
+}

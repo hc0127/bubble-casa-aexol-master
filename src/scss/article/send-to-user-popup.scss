@@ -1,0 +1,25 @@
+.send-to-user {
+  &__text {
+    text-align: center;
+    font-size: 16px;
+    color: $grey;
+    line-height: 19px;
+    margin-bottom: 50px;
+  }
+
+  .popup--inner {
+    width: calc(100vw - 40px);
+    max-width: 455px;
+    padding: 35px;
+    @include flex(normal, normal);
+    @include flex-direction(column)
+  }
+
+  .popup-title {
+    margin-bottom: 20px;
+  }
+
+  .article-title {
+    text-decoration: underline;
+  }
+}

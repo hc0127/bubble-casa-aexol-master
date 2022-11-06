@@ -1,0 +1,39 @@
+.searchbar-wrapper {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    z-index: 110;
+    @media(max-width: 960px) {
+        width: 90%;
+        left: 5%;
+    }
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    input {
+        width: 100%;
+        height: 80px;
+        font-size: 40px;
+        border-radius: 10px;
+        @media(max-width: 960px) {
+            font-size: 20px;
+        }
+    }
+
+    .close-icon {
+        font-size: 40px; 
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .discover__result {
+        top: 85px;
+    }
+}

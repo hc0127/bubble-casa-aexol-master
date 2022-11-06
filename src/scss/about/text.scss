@@ -1,0 +1,17 @@
+.text_container {
+	letter-spacing: 0.4px;
+	line-height: 1.4em;
+
+	&--title {
+		width: 100%;
+		@include flex(center, center);
+		text-align: center;
+		font-weight: bold;
+	}
+
+	& h1 {
+		font-size: 18px;
+		font-weight: bold;
+		margin: 15px 0;
+	}
+}

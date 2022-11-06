@@ -1,0 +1,38 @@
+.sign-in {
+	@include flex(center, flex-start);
+	flex-direction: column;
+
+	&--title {
+		margin-bottom: 40px;
+	}
+
+	.input {
+		width: 368px;
+		margin-bottom: 28px;
+		@media(max-width: 470px) {
+			width: 100%;
+		}
+	}
+
+	&__flex-box {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+	}
+
+	&__lost-password-button {
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 13px;
+	}
+
+	&__footer {
+		width: 100%;
+
+		.button:first-child {
+			margin-bottom: 18px;
+		}
+	}
+}

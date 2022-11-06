@@ -1,0 +1,25 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 200;
+	background-color: rgba(0, 0, 0, .2);
+	@include flex;
+
+	&--inner {
+		background-color: $white;
+		padding: 35px;
+		border-radius: 12px;
+		box-shadow: 0 0 36px rgba(0, 0, 0, .06);
+		position: relative;
+	}
+
+	&--close {
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+}

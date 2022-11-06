@@ -1,0 +1,112 @@
+.article-level {
+  @include flex(center, center);
+  text-align: center;
+  height: 34px;
+  position: relative;
+  color: $white;
+  border-radius: 6px;
+
+  &__label {
+    @include flex();
+    width: 160px;
+    font-size: 14px;
+    font-weight: $font-semi-bold;
+    background-color: $black;
+    height: 100%;
+    font-family: $futura;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+
+    @media(max-width: 960px) {
+      width: 80px;
+      font-size: 10px;
+    }
+
+    &.basic,
+    &.standard {
+      background-color: #c90c3b;
+    }
+  }
+
+  &__list {
+    width: 160px;
+    position: absolute;
+    background-color: $tooltip-background;
+    top: 40px;
+    right: 0;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 6px;
+  }
+
+  &__list-element {
+    @include flex();
+    font-size: 13px;
+    font-weight: $font-semi-bold;
+    height: 30px;
+    border-bottom: 1px solid #FFFFFF33;
+    cursor: pointer;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: #515867;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 0 1px 5px;
+    cursor: pointer;
+    align-self: center;
+
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+
+  .tooltip {
+    &__message {
+      top: 40px;
+      left: unset;
+      transform: unset;
+      right: 0;
+      width: 190px;
+      height: auto;
+      font-size: 12px;
+      padding: 10px 10px 0 10px;
+      white-space: unset;
+      line-height: 1.2;
+      text-align: left;
+
+      div {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      p {
+        margin: 5px 0 10px 8px;
+      }
+    }
+
+    &__no-user {
+      left: 0;
+      right: unset;
+      padding: 10px;
+    }
+
+    &__disabled {
+      .tooltip__message {
+        display: none;
+      }
+    }
+  }
+}

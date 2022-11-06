@@ -1,0 +1,47 @@
+@mixin flex($v: center, $h: center)
+{
+	display:-webkit-box; // old
+	display:-moz-box; // old
+	display:-ms-flexbox; // ie
+	display:-webkit-flex; // new
+	display:flex; // new
+	align-items: $v;
+	justify-content: $h;
+}
+
+@mixin flex-direction($direction: row) {
+	@if $direction == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: reverse;
+		-moz-box-orient: horizontal;
+	} @else if $direction == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: normal;
+		-moz-box-orient: vertical;
+	} @else if $direction == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+		-moz-box-direction: reverse;
+		-moz-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-moz-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+@mixin animate($type: all) {
+	transition: $type 380ms ease-in-out;
+}
+
+@mixin respond-to($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}

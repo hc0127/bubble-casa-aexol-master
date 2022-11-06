@@ -1,0 +1,96 @@
+.home {
+  @include flex;
+  height: 100vh;
+  background-color: $background-main;
+  overflow: hidden;
+
+  &--wrapper {
+    position: relative;
+  }
+
+  .main-bubble {
+    border-radius: 50%;
+    border: .55vh solid #fff;
+    filter: $shadow;
+    background-position: center;
+    background-size: cover;
+
+    &__choose {
+      background-color: $error-red;
+      z-index: 10;
+      height: 57.5vh;
+      width: 57.5vh;
+      color: white;
+      @include flex();
+      @include flex-direction(column);
+
+      .choose {
+        font-size: 9.25vh;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .interest {
+        font-size: 4.5vh;
+        font-weight: bold;
+        margin-left: 1.8vh;
+      }
+
+      .or {
+        margin-left: 10vh;
+      }
+
+      .input-wrapper {
+        text-align: right;
+
+        .button__secondary {
+          height: 4.6vh;
+          width: 13vh;
+          font-size: 2.3vh;
+          padding:0 10px;
+        }
+
+        .input--field {
+          height: 6.2vh;
+        }
+
+      }
+
+      svg{
+        height: 2.5vh;
+        width: 2.5vh;
+      }
+
+      .input {
+        width: 38vh;
+      }
+    }
+
+    &__about {
+      cursor: pointer;
+      position: absolute;
+      top: -14vh;
+      right: 43vh;
+      width: 40vh;
+      height: 40vh;
+    }
+
+    &__favorites {
+      cursor: pointer;
+      position: absolute;
+      bottom: 42vh;
+      right: -23vh;
+      width: 37vh;
+      height: 37vh;
+    }
+
+    &__discover {
+      cursor: pointer;
+      position: absolute;
+      top: 41vh;
+      right: -23vh;
+      width: 41vh;
+      height: 41vh;
+    }
+  }
+}
